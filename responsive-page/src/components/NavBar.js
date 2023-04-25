@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
-import { Navbar } from "react-bootstrap/Navbar";
-import { Nav } from "react-bootstrap/Nav";
-import { Container } from "react-bootstrap/Container";
+import { Navbar, Nav, Container } from "react-bootstrap";
+
 import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
-// import { NavDropdown } from "react-bootstrap/NavDropdown";
 
 export default function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
@@ -66,14 +64,14 @@ export default function NavBar() {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
-                <img src={navIcon1} alt="" />
+              <a href="#home">
+                <img src={navIcon1} alt="nav1" />
               </a>
               <a href="#">
-                <img src={navIcon2} alt="" />
+                <img src={navIcon2} alt="nav2" />
               </a>
               <a href="#">
-                <img src={navIcon3} alt="" />
+                <img src={navIcon3} alt="nav3" />
               </a>
             </div>
             <button className="vvd" onClick={() => console.log("connect)")}>
