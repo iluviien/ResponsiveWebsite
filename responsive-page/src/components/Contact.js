@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import contactImg from "../assets/img/contact-img.svg";
+import nodemailer from 'nodemailer';
+import mailtrap from 'nodemailer-mailtrap-transport';
+
 export default function Contact() {
   const formInitialDetails = {
     firstName: "",
@@ -13,6 +16,8 @@ export default function Contact() {
   const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
 
+  
+
   const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,
@@ -20,8 +25,8 @@ export default function Contact() {
     });
   };
   const handleSubmit = () {
-
-  }
+    
+ }
   return (
     <section className="contact" id="connect">
       <Container>
@@ -95,3 +100,8 @@ export default function Contact() {
     </section>
   );
 }
+
+
+
+
+
